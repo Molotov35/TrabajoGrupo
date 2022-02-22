@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1645509184 source:c:\users\50251\proyectos\tareasprogra\juego robot archivo\robot con archivo\main.cpp
-	<iostream>
-	<fstream>
-	<string>
-
