@@ -8,6 +8,7 @@
 #include <ctime>
 #include <vector>
 #include <fstream>
+#include "niveldeestudio.h"
 
 #define MAX 80
 #define ARCHIVO_USUARIOS "usuarios.dat"
@@ -437,10 +438,12 @@ void persona::menu()
 	cout<<"\t\t\t 4. Busca Personas"<<endl;
 	cout<<"\t\t\t 5. Borra Personas"<<endl;
 	cout<<"\t\t\t 6. Mostrar bitacora"<<endl;
-	cout<<"\t\t\t 7. Exit"<<endl;
+	cout<<"\t\t\t 7. Crear Niveles de Estudio"<<endl;
+	cout<<"\t\t\t 8. Mostrar niveles de estudio"<<endl;
+	cout<<"\t\t\t 9. Exit"<<endl;
 
 	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\tOpcion a escoger:[1/2/3/4/5/6]"<<endl;
+	cout<<"\t\t\tOpcion a escoger:[1/2/3/4/5/6/7/8]"<<endl;
 	cout<<"\t\t\t-------------------------------"<<endl;
 	cout<<"Ingresa tu Opcion: ";
     cin>>choice;
@@ -471,12 +474,18 @@ void persona::menu()
 		mostrarbitacora();
 		break;
 	case 7:
+        creararchivo();
+        break;
+    case 8:
+        displayne();
+		break;
+	case 9:
 		exit(0);
 	default:
 		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
 	}
 	getch();
-    }while(choice!= 6);
+    }while(choice!= 8);
 }
 void persona::insert()
 {
@@ -503,7 +512,7 @@ void persona::insert()
 	file_out.open("bitacora.txt", std::ios_base::app);
 	file_out <<"el ultimo usuario logueado ingreso un nuevo registro con id:  "<< id;
 
-	
+
 }
 void persona::display()
 {
@@ -657,7 +666,7 @@ void persona::delet()
 			}
 			else
 			{
-				found++;	
+				found++;
 				hora();
 				string filename("bitacora.txt");
     			ofstream file_out;
@@ -673,12 +682,69 @@ void persona::delet()
 		{
 			cout<<"\n\t\t\t Id Persona no encontrado...";
 		}
-		
+
 		remove("ParticipantRecord.txt");
 		rename("Record.txt","ParticipantRecord.txt");
 		file1.close();
 		file.close();
 	}
+}
+void persona::creararchivo()
+{
+    system("cls");
+    fstream file;
+    cout<<"\n-------------------------------------------------Agregar detalles del nivel de Estudio ---------------------------------------------"<<endl;
+	cout<<"\t\t\tIngresa Id Persona         : ";
+	cin>>id;
+	cout<<"\t\t\tIngresa Nombre Persona     : ";
+	cin>>name;
+	cout<<"\t\t\tIngresa Nivel Persona   : ";
+	cin>>nivel;
+	cout<<"\t\t\tIngresa Estudio Persona: ";
+	cin>>estudio;
+	cout<<"\t\t\tIngresa Departamento Persona  : ";
+	cin>>departamento;
+    file.open("NivelesdeEstudio.txt", ios::app | ios::out);
+	file<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< phone <<std::left<<std::setw(15)<< college <<std::left<<std::setw(15)<< address << "\n";
+	file.close();
+	hora();
+	string filename("bitacora.txt");
+	ofstream file_out;
+	file_out.open("bitacora.txt", std::ios_base::app);
+	file_out <<"el ultimo usuario logueado ingreso un nuevo registro con id:  "<< id;
+
+}
+void persona::displayne()
+{
+	system("cls");
+	fstream file;
+	int total=0;
+	cout<<"\n-------------------------Tabla de Detalles de Niveles de Estudio -------------------------"<<endl;
+	file.open("NivelesdeEstudio.txt",ios::in);
+	if(!file)
+	{
+		cout<<"\n\t\t\tNo hay información...";
+		file.close();
+	}
+	else
+	{
+		file >> id >> name >> nivel >> estudio >> departamento;
+		while(!file.eof())
+		{
+			total++;
+			cout<<"\n\n\t\t\t Id Persona: "<<id<<endl;
+			cout<<"\t\t\t Nombre Persona: "<<name<<endl;
+			cout<<"\t\t\t Nivel Persona: "<<nivel<<endl;
+			cout<<"\t\t\t Estudio de  Persona: "<<estudio<<endl;
+			cout<<"\t\t\t Departamento Persona: "<<departamento<<endl;
+			file >> id >> name >> nivel >> estudio >> departamento;
+		}
+		if(total==0)
+		{
+			cout<<"\n\t\t\tNo hay informacion(por Juna >:V)...";
+		}
+	}
+	file.close();
 }
 char hora()
 {
@@ -708,18 +774,18 @@ int year = 1900 + time->tm_year;
     ofstream file_out;
 
     file_out.open("bitacora.txt", std::ios_base::app);
-    file_out << endl<< time->tm_mday << "/" << mes[time->tm_mon] << "/" << year << "  "<< time->tm_hour << ":" 
+    file_out << endl<< time->tm_mday << "/" << mes[time->tm_mon] << "/" << year << "  "<< time->tm_hour << ":"
 << time->tm_min << ":" << time->tm_sec<<"  \t";
 
  return 0;
 }
 int mostrarbitacora(){
-	
+
 	system("cls");
 	string linea;
-	
+
 	ifstream archivo("bitacora.txt");
-	
+
 	while (getline(archivo,linea)){
 		cout<<linea<<endl;
 	}
