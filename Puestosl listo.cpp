@@ -1,45 +1,18 @@
 #include <iostream>
-#include <stdio.h>
-#include <string.h>
-#include <windows.h>
+#include <fstream>
+
+{
+    int Codigo_Puesto,Nombre_Puesto ;
+    printf("\n\t\t\t  INGRESO DE PUESTO\n");
+		printf("\t\t\t====================\n");
+		printf("\n");
+    std::cout << "INGRESE EL CODIGO DE PUESTO : ";
+    std::cin >> Codigo_Puesto;
+    printf("\n");
+    std::cout << "INGRESE NOMBRE DEL PUESTO : ";
+    std::cin >> Nombre_Puesto;
 
 
-using namespace std;
-const char *nombe_archivo = "archivo.dat";
-
-struct Empleado{
-	int codigo_Puesto;
-	char nombre_Puesto[50];
-	int borrar=0;
-};
-void ingresar();
-
-main(){}
-
-void ingresar(){
-	system("cls");
-	char continuar;
-	FILE* archivo = fopen(nombe_archivo, "ab");
-	string nombre_Puesto,codigo_Puesto;
-		Empleado empleado;
-		do{
-			fflush(stdin);
-		cout<<"INGRESE CODIGO DEL PUESTO: ";
-		cin>>empleado.codigo_Puesto;
-        cin.ignore();
-
-		cout<<"INGRESE NOMBRE DEL PUESTO:             ";
-		cin>>empleado.nombre_Puesto;
-		cin.ignore();
-
-		empleado.borrar==0;
-		fwrite( &empleado, sizeof(Empleado), 1, archivo );
-
-		cout<<"QUIERE REGISTRAR OTRO EMPLEADO [S/N] : ";
-		cin>>continuar;
-		} while((continuar=='s') || (continuar=='S') );
-
-	fclose(archivo);
-	main();
+    return 0;
 
 }
