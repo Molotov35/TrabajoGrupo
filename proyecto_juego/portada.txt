@@ -1,0 +1,24 @@
+
+			                 BIENVENIDOS AL LABERINTO
+                                           
+                                                                                          
+       7r7r7::        .r7uLr:      r77r7::      r7r7rrrr   i77r7i:.   .7r7r777r77.        
+     rBrvr:irUgM    SQSi...:ugR   BJv7i:iJEQ.  Bvv7iiiiiB BJv7iiivPQ:iB:ri7vYrriiBr       
+     gI   i:   iB  Bj   r7r   :B. B   ii   .B .Q   :...:B.B   ::.   QBS ..    ...Bi       
+     qP  RB.B.  B:RY  LBr.rB2  .B B  :BiBi  Bi Q  vBrrv.  B  .B.BR  .Q ..BU  QR.:.        
+     PK  JQUP   B.B   Q     B   BiB   K7v  JB  Q  .P777E  B   Q1E:  QU   Bj  Qr           
+     Kq       5B .B  .B     B.  RiB        rB: M       B: B       .BJ    Bu  Mv           
+     PK  sBP  .B  B   B.   .B   B.B  :BijB   B:Z  iB:rr.  B   BQ.  MP    BJ  R7           
+     KK  ZX7B   B Bv  iBIvSQ.  PP B  .B:JB   Bib  rQiirr. B   B B   Bj   Bj  gv           
+     DX  EP B5  :B BU   ..   .MB  B        :QJ B        B:B   B :B   B.  BY  QJ           
+     :Bu2B:  BK25B  URdUvrL5DDr   QdSIujIKZP:  QPSSJujjuQ RXUDg  IQujQr  7B12B.           
+       ..     .:.      .:::.       ......       ........   ..      ..      ..                                                                                          
+                                                                                                
+                                                                                                                                                
+		[1] JUGAR
+		[2] INSTRUCCIONES
+		[3] HISTORIA
+		[4] CREDITOS
+		[5] SALIR
+
+

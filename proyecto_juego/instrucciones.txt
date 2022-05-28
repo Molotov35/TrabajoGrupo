@@ -1,0 +1,46 @@
+  
+
+
+
+
+
+
+
+
+
+
+      
+			INSTRUCCIONES
+                                          
+		 	                      .U1:                       
+		 	                      L.J.                       
+		 	           .::iiiiiii7i7:                        
+		 	          vi77iriririi:                          
+		 	         1.r.                                    
+		 	         v.i                                     
+		 	         U v                                     
+		 	         :viri.:::::..                           
+		 	           irr7r777r7rir                         
+		 	                     .: r                        
+		 	                      BBBB                       
+		 	           ..:.. .:i::121I:iii.  ::...           
+		 	         :rbBBBB2              rQBBBQL.i         
+		 	        rqQBB  BBBX  ....... .BBB   BBB.7        
+		 	       :PQM27  v5QB:r:.....u BBr2jiI1iBB::       
+	 		       iBB        B5r      r.B.  BBB  :B:i       
+		 	       riBBQg  QBBB iriiiiiY BBQB  .BBBd r       
+		 	       J .BBBJuBQB.           ZBBv 1QBP .7       
+		 	       u   .UQQJ.               7gQdr   :7       
+		 	       I             qiiirrI            .v       
+		 	       L:           :J     q            Y:       
+		 	        S.         .S      .5          i1        
+		 	         s7.     .7J        .Jr      .Y7         
+		 	          .rrrrrrr.           .rrrirri           
+ 	                                                 
+	
+
+
+		1) Te mueves a travez de las teclas "W" (Arriba), "S" (Abajo), "A" (Izquierda), "D" (Derecha)
+		2) El objetivo es llevar a "Robert" hacia el premio ( $ )
+		3) Debes cuidarte de las sorpresas que te puede dar nuestro mapa *_-
+                                                  
