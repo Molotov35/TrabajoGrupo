@@ -1,5 +1,3 @@
-#ifndef SUELDOS_H_INCLUDED
-#define SUELDOS_H_INCLUDED
 
 
 
@@ -15,7 +13,7 @@ using namespace std;
 
 
 /// FUNCION QUE NOS PERMITIRA MOVILIZAR EL CURSOR
-void gotoxy(int x,int y){
+/*void gotoxy(int x,int y){
 	HANDLE hcon;
 	hcon = GetStdHandle(STD_OUTPUT_HANDLE);
 	COORD dwPos;
@@ -23,12 +21,14 @@ void gotoxy(int x,int y){
 	dwPos.Y= y;
 	SetConsoleCursorPosition(hcon,dwPos);
 }
+*/
+int conteosueldos () {
 
-int main () {
+    system("cls");
 
 	setlocale(LC_CTYPE,"Spanish"); /// ASIGNAMOS IDIOMA
 
-	system("color F0"); // CAMBIAMOS EL COLOR DE LA CONSOLA A FONDO BLANCO LETRAS NEGRAS
+	//system("color F0"); /// CAMBIAMOS EL COLOR DE LA CONSOLA A FONDO BLANCO LETRAS NEGRAS
 
     /// INICIA CENTRADO DE TEXTO PARA LA PRIMER INTERFAZ
     int counter;
@@ -79,6 +79,10 @@ int main () {
 		z=location[x][1];
 		gotoxy(y,z);
 		getline(cin, answer[x]);
+		if (answer[x] == "\0"){
+            x=x-1;
+		};
+		//cout << y << "   " << z << "   " << x << "   " << answer[x];
 	}
 	/// FINALIZA FORMULARIO
 
