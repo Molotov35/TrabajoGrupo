@@ -1,35 +1,47 @@
-void persona::insert2()
+
+//char id, phone;
+string name;
+
+void insert2()
 {
+
     system("cls");
     fstream file;
     cout<<"\n-------------------------------------------------Agregar detalles del nivel de Estudio ---------------------------------------------"<<endl;
-	cout<<"\t\t\tIngresa Id Persona         : ";
-	cin>>id;
-	cout<<"\t\t\tIngresa Nombre Persona     : ";
+	cout<<"\t\t\tIngresa el nivel de estudio: ";
+	cin>>name;
+	/*cout<<"\t\t\tIngresa Nombre Persona     : ";
 	cin>>name;
 	cout<<"\t\t\tIngresa Nivel Persona   : ";
 	cin>>phone;
 	cout<<"\t\t\tIngresa Estudio Persona: ";
 	cin>>college;
 	cout<<"\t\t\tIngresa Departamento Persona  : ";
-	cin>>address;
-    file.open("NivelesdeEstudio.txt", ios::app | ios::out);
-	file<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< phone <<std::left<<std::setw(15)<< college <<std::left<<std::setw(15)<< address << "\n";
+	cin>>address;*/
+	/*id="0";
+	phone="0";
+	college = "0";
+	address = "0";
+*/
+    //cout << name;
+
+    file.open("NivelesdeEstudio.dat", ios::app | ios::out);
+	file<<std::left<<std::setw(15)<< name << "\n";
 	file.close();
 	hora();
-	string filename("bitacora.txt");
+	string filename("bitacora.dat");
 	ofstream file_out;
-	file_out.open("bitacora.txt", std::ios_base::app);
-	file_out <<"el ultimo usuario logueado ingreso un nuevo registro con id:  "<< id;
+	file_out.open("bitacora.dat", std::ios_base::app);
+	file_out <<"el ultimo usuario ingreso un nivel de estudio  "<< name ;
 
 }
-void persona::display2()
+void display2()
 {
 	system("cls");
 	fstream file;
 	int total=0;
 	cout<<"\n-------------------------Tabla de Detalles de Niveles de Estudio -------------------------"<<endl;
-	file.open("NivelesdeEstudio.txt",ios::in);
+	file.open("NivelesdeEstudio.dat",ios::in);
 	if(!file)
 	{
 		cout<<"\n\t\t\tNo hay información...";
@@ -37,16 +49,16 @@ void persona::display2()
 	}
 	else
 	{
-		file >> id >> name >> phone >> college >> address;
+		file >> name ;
 		while(!file.eof())
 		{
 			total++;
-			cout<<"\n\n\t\t\t Id Persona: "<<id<<endl;
-			cout<<"\t\t\t Nombre Persona: "<<name<<endl;
-			cout<<"\t\t\t Nivel Persona: "<<phone<<endl;
-			cout<<"\t\t\t Estudio de  Persona: "<<college<<endl;
-			cout<<"\t\t\t Departamento Persona: "<<address<<endl;
-			file >> id >> name >> phone >> college >> address;
+			//cout<<"\n\n\t\t\t Id Persona: "<<id<<endl;
+			cout<<"\t\t\t Nombre de los niveles de estudio: "<<name<<endl;
+			//cout<<"\t\t\t Nivel Persona: "<<phone<<endl;
+			//cout<<"\t\t\t Estudio de  Persona: "<<college<<endl;
+			//cout<<"\t\t\t Departamento Persona: "<<address<<endl;
+			file >> name ;
 		}
 		if(total==0)
 		{
